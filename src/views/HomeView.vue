@@ -16,6 +16,10 @@ body{
   background: #14365b;
 }
 
+img{
+  height: auto;
+  width: auto;
+}
 h1{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: aliceblue;

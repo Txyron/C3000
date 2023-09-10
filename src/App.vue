@@ -22,7 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <style scoped>
 body{
-  background: black;
+  background: #14365b;
 }
 
 header {

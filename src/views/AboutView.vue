@@ -3,10 +3,10 @@
     <div id="app">
     <main class="content">
       <div class="box">
-        <h1>Fiche d'intervention</h1>
+        <h3>Fiche d'intervention</h3>
 
         <div class="box-1">
-          <h4>Date et heure de début :</h4>
+          <h4>Date et heure de début</h4>
           <input type="datetime-local" name="dateDebut" id="dateDebut" value="2023-09-06T08:00">
           <h4>Date et heure de fin :</h4>
           <input type="datetime-local" name="dateFin" id="dateFin" value="2023-09-06T10:00">
@@ -35,9 +35,7 @@
             rows="10"
             placeholder="Saisissez vos observations ici..."
           ></textarea>
-          <router-link to="/Recap">
-            <button class="button">ENVOYER</button>
-          </router-link>
+          <router-link to="/Recap"><button class="button">ENVOYER</button></router-link>
         </div>
       </div>
     </main>
@@ -47,23 +45,21 @@
 
 <style>
 
-
-
-h1 {
-  font-family: kanit;
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   padding: 20px;
-  color: #000000;
+  color: #ffffff;
   font-size: 20px;
 }
 
 .button {
-  font-family: kanit;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #ffffff;
   background-color: #55ab41;
   margin: 5px;
   padding: 10px;
-  width: 40%;
+  width: 50%;
   border-style: none;
   border-radius: 10px;
 }
@@ -73,7 +69,7 @@ h1 {
   background-size: cover;
   margin: 10px;
   padding: 0;
-  font-family: kanit;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .box {
