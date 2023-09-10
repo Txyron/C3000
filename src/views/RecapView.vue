@@ -1,5 +1,5 @@
 <template>
-<h1 class="title-text">RECAP 
+<h2 class="title-text">RECAP 
     
     
 <p class="title-text2">Bonjour, M./Mme,<br>
@@ -7,7 +7,7 @@ Nous allons intervenir aujourd’hui à partir de *DATE ET HEURE* jusqu’à *DA
 
 
 <p class="second-text">Vous avez besoin d’informations complémentaires ou vous souhaitez reporter l’intervention ? Contactez-nous dès maintenant en répondant à notre email ou  téléphone.</p>
-</h1>
+</h2>
 
 
 
@@ -33,7 +33,7 @@ body{
     background: #14365b;
 }
 
-h1{
+h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50px;
     border: 1px solid #ffffff;
@@ -47,13 +47,10 @@ h1{
 .title-text2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:25px;
-    border: 1px solid #000000;
-    border-width: 4px;
-    border-radius: 5px;
     background:aliceblue;
     color: black;
 }
-h1 p{
+h2 p{
     font-size: 20px;
     
 }
