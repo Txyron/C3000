@@ -30,16 +30,16 @@ header {
   max-height: 100vh;
 }
 
-
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 30px;
   text-align: center;
 }
 
 nav a.router-link-exact-active {
   color: var(--color-text);
   color: aliceblue;
+  background: #55ab41;
 
 }
 
@@ -55,7 +55,7 @@ nav a {
   color: gray;
   text-decoration: none;
   border-radius: 3px;
-  background: black;
+  background: #55ab41);
 }
 
 nav a:first-of-type {
