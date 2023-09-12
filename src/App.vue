@@ -32,7 +32,6 @@ header {
 
 nav {
   width: 100%;
-  font-size: 30px;
   text-align: center;
 }
 
@@ -40,7 +39,7 @@ nav a.router-link-exact-active {
   color: var(--color-text);
   color: aliceblue;
   background: #55ab41;
-
+  font-size: 30px;
 }
 
 nav a.router-link-exact-active:hover {
@@ -52,10 +51,9 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
-  color: gray;
+  color: rgb(168, 168, 168);
   text-decoration: none;
   border-radius: 3px;
-  background: #55ab41);
 }
 
 nav a:first-of-type {

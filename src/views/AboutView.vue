@@ -10,24 +10,20 @@
           <input type="datetime-local" name="dateDebut" id="dateDebut" value="2023-09-06T08:00">
           <h4>Date et heure de fin :</h4>
           <input type="datetime-local" name="dateFin" id="dateFin" value="2023-09-06T10:00">
-          <h4>Intervenant :</h4>
-          <input type="text" name="intervenant" id="intervenant" placeholder="Nom de l'intervenant...">
-          <h4>Nature de l’intervention</h4>
-          <textarea
-            name="Nature d'intervention"
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Saisissez votre message ici..."
-          ></textarea>
+    <h4>Intervenant :</h4>
+    <select name="choix_intervenant" id="choix_intervenant">
+        <option value="option1">Hugo</option>
+        <option value="option2">Louis</option>
+        <option value="option3">Lucas</option>
+        <option value="option4">David</option>
+    </select>
+         
         </div>
 
         <div class="box-2">
           <h4>Nom du client :</h4>
           <input type="text" name="nomClient" id="nomClient" placeholder="Nom du client...">
-          <h4>Adresse :</h4>
-          <input type="text" name="adresseClient" id="adresseClient" placeholder="Adresse...">
-          
+         
           <h4>Observations</h4>
           <textarea
             name="Observations"
@@ -35,13 +31,19 @@
             rows="10"
             placeholder="Saisissez vos observations ici..."
           ></textarea>
-          <router-link to="/Recap"><button class="button">ENVOYER</button></router-link>
+          <router-link to="/Recap"><button class="button" onclick="recapData()">ENVOYER</button></router-link>
         </div>
       </div>
     </main>
   </div>
   </div>
 </template>
+
+<script>
+
+
+
+</script>
 
 <style>
 
@@ -76,7 +78,8 @@ h3 {
   text-align: center;
   background-color: #000000;
   padding: 5%;
-  margin: 5%; 
+  margin: 5%;
+  width: 100%;
   border: 2px solid #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
@@ -86,7 +89,7 @@ h3 {
 .box-1, .box-2 {
   width: 100%; 
   box-sizing: border-box;
-  padding: 5px;
+  padding: 2px;
 }
 
 textarea {

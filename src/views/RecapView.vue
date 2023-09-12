@@ -1,15 +1,13 @@
 <template>
-<h2 class="title-text">RECAP 
-    
+    <h4 class="title-text">Récapitulatif
+    <p>Nom de l'intervenant : <span id="choix_intervenant"></span></p>
     
 <p class="title-text2">Bonjour, M./Mme,<br>
-Nous allons intervenir aujourd’hui à partir de *DATE ET HEURE* jusqu’à *DATE ET HEURE* au *RUE/ADRESSE* pour l’intervention prévue en ce jour.</p>
+Nous allons intervenir à partir de <span id="dateDebut"></span> jusqu’à <span id="dateFin"></span> pour l’intervention prévue en ce jour.</p>
 
-
+<br>
 <p class="second-text">Vous avez besoin d’informations complémentaires ou vous souhaitez reporter l’intervention ? Contactez-nous dès maintenant en répondant à notre email ou  téléphone.</p>
-</h2>
-
-
+</h4>
 
 </template>
 
@@ -22,7 +20,6 @@ export default{
             ]
         }
     }
-
 }
 </script>
 
