@@ -1,27 +1,21 @@
 <template>
-    <h4 class="title-text">Récapitulatif
-    <p>Nom de l'intervenant : <span id="choix_intervenant"></span></p>
-    
-<p class="title-text2">Bonjour, M./Mme,<br>
-Nous allons intervenir à partir de <span id="dateDebut"></span> jusqu’à <span id="dateFin"></span> pour l’intervention prévue en ce jour.</p>
-
-<br>
-<p class="second-text">Vous avez besoin d’informations complémentaires ou vous souhaitez reporter l’intervention ? Contactez-nous dès maintenant en répondant à notre email ou  téléphone.</p>
-</h4>
-
-</template>
-
-<script>
-export default{
-    data(){
-        return{
-            recap:[
-                {title: 'Retour accueil', id:1, details: 'retour'}
-            ]
-        }
-    }
-}
-</script>
+    <div class="recap">
+      <h3>Récapitulatif de l'intervention</h3>
+      <p>Date et heure de début : {{ $route.query.dateDebut }}</p>
+      <p>Date et heure de fin : {{ $route.query.dateFin }}</p>
+      <p>Intervenant : {{ $route.query.choix_intervenant }}</p>
+      <p>Nom du client : {{ $route.query.nomClient }}</p>
+      <p>Observations :</p>
+      <p>{{ $route.query.Observations }}</p>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    // composant de la page Recap
+  };
+  </script>
+  
 
 <style>
 
@@ -30,14 +24,12 @@ body{
     background: #14365b;
 }
 
-h2{
+h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-    border: 1px solid #ffffff;
-    border-width: 4px;
-    border-radius: 5px;
-    background:aliceblue;
-    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    background:#14365b;
+    color: white;
     text-align: center;
 }
 
@@ -46,13 +38,24 @@ h2{
     font-size:25px;
     background:aliceblue;
     color: black;
+    border-radius: 6px;
 }
-h2 p{
+h3 p{
     font-size: 20px;
+    color: black;
     
 }
 .second-text{
     font-style: italic;
+}
+
+.recap{
+  background: white;
+  color: black;   border: 1px solid #ffffff;
+    border-width: 4px;
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
 }
 
 </style>

@@ -1,49 +1,49 @@
 <template>
   <div class="about">
-    <div id="app">
     <main class="content">
       <div class="box">
         <h3>Fiche d'intervention</h3>
-
         <div class="box-1">
           <h4>Date et heure de début</h4>
-          <input type="datetime-local" name="dateDebut" id="dateDebut" value="2023-09-06T08:00">
+          <input type="datetime-local" v-model="dateDebut">
           <h4>Date et heure de fin :</h4>
-          <input type="datetime-local" name="dateFin" id="dateFin" value="2023-09-06T10:00">
-    <h4>Intervenant :</h4>
-    <select name="choix_intervenant" id="choix_intervenant">
-        <option value="option1">Hugo</option>
-        <option value="option2">Louis</option>
-        <option value="option3">Lucas</option>
-        <option value="option4">David</option>
-    </select>
-         
+          <input type="datetime-local" v-model="dateFin">
+          <h4>Intervenant :</h4>
+          <select v-model="choix_intervenant">
+            <option value="Hugo">Hugo</option>
+            <option value="Louis">Louis</option>
+            <option value="Lucas">Lucas</option>
+            <option value="David">David</option>
+          </select>
         </div>
-
         <div class="box-2">
           <h4>Nom du client :</h4>
-          <input type="text" name="nomClient" id="nomClient" placeholder="Nom du client...">
-         
+          <input type="text" v-model="nomClient" placeholder="Nom du client...">
           <h4>Observations</h4>
-          <textarea
-            name="Observations"
-            cols="30"
-            rows="10"
-            placeholder="Saisissez vos observations ici..."
-          ></textarea>
-          <router-link to="/Recap"><button class="button" onclick="recapData()">ENVOYER</button></router-link>
+          <textarea v-model="Observations" cols="30" rows="10" placeholder="Saisissez vos observations ici..."></textarea>
+          <router-link :to="{ path: '/Recap', query: { dateDebut, dateFin, choix_intervenant, nomClient, Observations } }">
+            <button class="button">ENVOYER</button>
+          </router-link>
         </div>
       </div>
     </main>
   </div>
-  </div>
 </template>
 
 <script>
-
-
-
+export default {
+  data() {
+    return {
+      dateDebut: '',
+      dateFin: '',
+      choix_intervenant: '',
+      nomClient: '',
+      Observations: '',
+    };
+  },
+};
 </script>
+
 
 <style>
 
@@ -64,7 +64,14 @@ h3 {
   width: 50%;
   border-style: none;
   border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.button:hover {
+  background-color: #14365b; /* Changez cette couleur selon vos préférences */
+  color: #fff; /* Changez cette couleur selon vos préférences */
+}
+
 
 .content {
   background-repeat: no-repeat;
@@ -78,18 +85,21 @@ h3 {
   text-align: center;
   background-color: #000000;
   padding: 5%;
-  margin: 5%;
-  width: 100%;
+  margin: 10%; /* Augmentation des marges */
+  width: 100%; 
+  height: 100%;
   border: 2px solid #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
+
 .box-1, .box-2 {
   width: 100%; 
   box-sizing: border-box;
   padding: 2px;
+  
 }
 
 textarea {
@@ -106,7 +116,8 @@ textarea {
   }
 
   .button {
-    width: 100%;
-  }
+  width: 100%;
+
+}
 }
 </style>
