@@ -68,8 +68,8 @@ h3 {
 }
 
 .button:hover {
-  background-color: #14365b; /* Changez cette couleur selon vos préférences */
-  color: #fff; /* Changez cette couleur selon vos préférences */
+  background-color: #14365b;
+  color: #fff;
 }
 
 
@@ -85,7 +85,7 @@ h3 {
   text-align: center;
   background-color: #000000;
   padding: 5%;
-  margin: 10%; /* Augmentation des marges */
+  margin: 10%;
   width: 100%; 
   height: 100%;
   border: 2px solid #ffffff;

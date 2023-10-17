@@ -12,8 +12,8 @@
   
   <script>
   export default {
-    // composant de la page Recap
   };
+  
   </script>
   
 
